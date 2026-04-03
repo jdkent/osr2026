@@ -12,7 +12,7 @@ title: Submit
 This year, we are opening 6 available time slots for you to submit your own **emergent session**. 
 
 <p align="justify">
-  Before starting your submission make sure you are familiar with the [OSR formats](/formats/){:target="_blank"}.
+  Before starting your submission make sure you are familiar with the [OSR formats]({{ '/formats/' | relative_url }}){:target="_blank"}.
 </p>
 
 ## Emergent Session Submissions
@@ -38,7 +38,7 @@ The current 2026 OSR program includes **6 slots** for application. All times bel
 
 <br> 
 **You can request to hold such a session by filling out the form below. You do not need a GitHub account to submit.**<br> <br>
-The current schedule provides numbered emergent-session slots rather than confirmed titles. Session topics and hosts will be added to the [Emergent Sessions](/emergent/) page as they are confirmed. <br> 
+The current schedule provides numbered emergent-session slots rather than confirmed titles. Session topics and hosts will be added to the [Emergent Sessions]({{ '/emergent/' | relative_url }}) page as they are confirmed. <br> 
 </p>
 
 <iframe width="100%" height="900px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=peLXMdi9TkGel76pmOvf4d0T-_VvMCNMlRO35Le8ntFUNDJKMEJXUUkxWEhRQUY3S0E1NVA1NTJOVS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
@@ -46,7 +46,7 @@ The current schedule provides numbered emergent-session slots rather than confir
 #### Confirmed sessions
 
 <p align="justify">
-Confirmed emergent-session titles and hosts will be posted on the [Emergent Sessions](/emergent/) page as soon as they are assigned to the current 2026 schedule slots.<br>
+Confirmed emergent-session titles and hosts will be posted on the [Emergent Sessions]({{ '/emergent/' | relative_url }}) page as soon as they are assigned to the current 2026 schedule slots.<br>
 <br>
 </p>
 

@@ -9,8 +9,7 @@ The OSR has always been a place to learn and share experiences. In 2026, the cur
 
 {% for session in scheduled_sessions %}
 {% if session.category == "roundtable" or session.category == "panel" %}
-## {% if session.category == "roundtable" %}OSR Round Table{% else %}OSR Panel{% endif %}: {{ session.title }}
-<div id="{{ session.anchor }}"></div>
+<h2 id="{{ session.anchor }}">{% if session.category == "roundtable" %}OSR Round Table{% else %}OSR Panel{% endif %}: {{ session.title }}</h2>
 When: {{ session.start_time }}-{{ session.end_time }} CEST (UTC+2) | {{ session.day_label }} ({{ session.weekday }})
 
 {{ session.description }}

@@ -40,8 +40,8 @@ For individuals requiring hearing support or who speak English as a second langu
 ## Open broadcast for zero-cost registrants
 {::options parse_block_html="true" /}
 <p align="justify">
-The OSR can be accessed for zero-cost at the point of [registration](/register/). Zero-cost registrants can watch [panel sessions](/schedule/), take part in live text-based Q&A, [host](/submit/) and participate in [emergent sessions](/formats/#emergent), and join our scheduled social events!
-Broadcast will take place via Crowdcast and DouYu. Both these services allow participants to direct questions to speakers. You will be sent details on how to connect to these services after [registration](/register/) and before the start of the OHBM meeting.
-We also encourage our zero-cost registrants to use [Mattermost](https://mattermost.brainhack.org) to chat together, with our speakers and with our [volunteer team](/volunteers/). If you are not familiar with Mattermost, you can check out the [user-guide](https://docs.mattermost.com/guides/user.html) and this [short video](https://www.youtube.com/watch?v=eq4yEM5z5SY&list=PL-jqvaPsjQpMqnRgFEw_3fuGQbcVDTpaM&index=5) describing how it works.
+The OSR can be accessed for zero-cost at the point of [registration]({{ '/register/' | relative_url }}). Zero-cost registrants can watch [panel sessions]({{ '/schedule/' | relative_url }}), take part in live text-based Q&A, [host]({{ '/submit/' | relative_url }}) and participate in [emergent sessions]({{ '/formats/#emergent' | relative_url }}), and join our scheduled social events!
+Broadcast will take place via Crowdcast and DouYu. Both these services allow participants to direct questions to speakers. You will be sent details on how to connect to these services after [registration]({{ '/register/' | relative_url }}) and before the start of the OHBM meeting.
+We also encourage our zero-cost registrants to use [Mattermost](https://mattermost.brainhack.org) to chat together, with our speakers and with our [volunteer team]({{ '/volunteers/' | relative_url }}). If you are not familiar with Mattermost, you can check out the [user-guide](https://docs.mattermost.com/guides/user.html) and this [short video](https://www.youtube.com/watch?v=eq4yEM5z5SY&list=PL-jqvaPsjQpMqnRgFEw_3fuGQbcVDTpaM&index=5) describing how it works.
 </p>
 {::options parse_block_html="false" /}

@@ -10,8 +10,7 @@ Table talks are informal discussions across the community, open to trainees, ear
 ### OHBM 2026 program
 
 {% for session in table_talks %}
-#### Table Talk {{ session.number }}: {{ session.title }}
-<div id="{{ session.anchor }}"></div>
+<h4 id="{{ session.anchor }}">Table Talk {{ session.number }}: {{ session.title }}</h4>
 When: {{ session.start_time }}-{{ session.end_time }} CEST (UTC+2) | {{ session.day_label }} ({{ session.weekday }})
 
 {{ session.description }}

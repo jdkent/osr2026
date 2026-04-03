@@ -12,7 +12,7 @@ All times on this page are shown for Bordeaux, using the `Europe/Paris` timezone
 <div id='emergent-sign'></div>
 <h2>Program and sign-up</h2>
 
-**You can request to hold such a session by filling out our [submission form](/submit/){:target="_blank"}. You do not need a GitHub account to submit.**<br> <br>
+**You can request to hold such a session by filling out our [submission form]({{ '/submit/' | relative_url }}){:target="_blank"}. You do not need a GitHub account to submit.**<br> <br>
 The current schedule lists six emergent-session time slots. At the moment, only session numbering has been confirmed for these slots, so titles, hosts, and links will be added here as they are confirmed. <br>
 
 ### Emergent Session 1

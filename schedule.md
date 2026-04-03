@@ -5,7 +5,8 @@ permalink: /schedule/
 ---
 
 {% assign schedule_days = site.data.osr_schedule.days %}
-{% assign schedule_base_url = "https://ohbm.github.io/osr2026" %}
+{% assign schedule_base_url = site.url %}
+{% assign schedule_path = '/schedule/' | relative_url %}
 
 <div class="schedule-days">
 {% for day in schedule_days %}
@@ -25,7 +26,7 @@ permalink: /schedule/
 </p>
 
 <p style="text-align: center;">
-<a href="/downloads/OSRschedule.ics" download="OSR2026_Bordeaux.ics">Download the full OSR calendar (.ics)</a><br>
+<a href="{{ '/downloads/OSRschedule.ics' | relative_url }}" download="OSR2026_Bordeaux.ics">Download the full OSR calendar (.ics)</a><br>
 <em>You can import that file into Apple Calendar, Outlook, or Google Calendar, and each event below also has its own Google Calendar link.</em>
 </p>
 
@@ -52,24 +53,28 @@ permalink: /schedule/
                 <td>{% if session %}{{ session.start_time }}-{{ session.end_time }}{% else %}{{ entry.start_time }}-{{ entry.end_time }}{% endif %}</td>
                 <td>
                     {% if session %}
-                      {% assign session_href = session.page_url | append: "#" | append: session.anchor %}
+                      {% assign session_href = session.page_url | append: "#" | append: session.anchor | relative_url %}
                       {% capture calendar_title %}{% if session.category == "panel" %}Panel {{ session.number }}: {% elsif session.category == "tabletalk" %}Table Talk {{ session.number }}: {% endif %}{{ session.title }}{% endcapture %}
                       <div>
                         {% if session.category == "roundtable" %}
-                          <a href="{{ session.page_url }}">{{ session.title }}</a>
+                          <a href="{{ session_href }}">{{ session.title }}</a>
                         {% elsif session.category == "panel" %}
-                          <a href="{{ session.page_url }}">Panel {{ session.number }}:</a> {{ session.title }}
+                          <a href="{{ session_href }}">Panel {{ session.number }}:</a> {{ session.title }}
                         {% else %}
-                          <a href="{{ session.page_url }}">Table Talk {{ session.number }}:</a> {{ session.title }}
+                          <a href="{{ session_href }}">Table Talk {{ session.number }}:</a> {{ session.title }}
                         {% endif %}
                       </div>
                     {% else %}
-                      {% assign session_href = entry.page_url %}
+                      {% if entry.page_url contains '://' %}
+                        {% assign session_href = entry.page_url %}
+                      {% else %}
+                        {% assign session_href = entry.page_url | relative_url %}
+                      {% endif %}
                       {% assign calendar_title = entry.title %}
-                      <div>{% if entry.page_url == "/schedule/" %}{{ entry.title }}{% else %}<a href="{{ entry.page_url }}">{{ entry.title }}</a>{% endif %}</div>
+                      <div>{% if entry.page_url == "/schedule/" %}{{ entry.title }}{% else %}<a href="{{ session_href }}">{{ entry.title }}</a>{% endif %}</div>
                     {% endif %}
                 </td>
-                <td><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{ calendar_title | uri_escape }}&dates={% if session %}{{ session.gcal_start }}%2F{{ session.gcal_end }}{% else %}{{ entry.gcal_start }}%2F{{ entry.gcal_end }}{% endif %}&ctz=Europe%2FParis&details=OHBM%20Open%20Science%20Room%202026%20session.%20Full%20schedule%3A%20{{ schedule_base_url | append: '/schedule/' | uri_escape }}&location={{ schedule_base_url | append: session_href | uri_escape }}" target="_blank" rel="noopener">Add to Google Calendar</a></td>
+                <td><a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{ calendar_title | uri_escape }}&dates={% if session %}{{ session.gcal_start }}%2F{{ session.gcal_end }}{% else %}{{ entry.gcal_start }}%2F{{ entry.gcal_end }}{% endif %}&ctz=Europe%2FParis&details=OHBM%20Open%20Science%20Room%202026%20session.%20Full%20schedule%3A%20{{ schedule_base_url | append: schedule_path | uri_escape }}&location={% if session_href contains '://' %}{{ session_href | uri_escape }}{% else %}{{ schedule_base_url | append: session_href | uri_escape }}{% endif %}" target="_blank" rel="noopener">Add to Google Calendar</a></td>
             </tr>
             {% endfor %}
         </table>

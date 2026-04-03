@@ -25,7 +25,8 @@ DTSTART:19701025T030000
 RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
-{%- assign schedule_base_url = "https://ohbm.github.io/osr2026" -%}
+{%- assign schedule_base_url = site.url -%}
+{%- assign schedule_path = '/schedule/' | relative_url -%}
 {%- for day in site.data.osr_schedule.days -%}
 {%- for entry in day.entries -%}
 {%- assign session = nil -%}
@@ -33,15 +34,22 @@ END:VTIMEZONE
 {%- assign session = site.data.osr_sessions | where: "id", entry.session_id | first -%}
 {%- endif -%}
 {%- capture summary -%}{%- if session -%}{%- if session.category == "panel" -%}Panel {{ session.number }}: {%- elsif session.category == "tabletalk" -%}Table Talk {{ session.number }}: {%- endif -%}{{ session.title }}{%- else -%}{{ entry.title }}{%- endif -%}{%- endcapture -%}
+{%- if session -%}
+{%- assign event_url = session.page_url | append: '#' | append: session.anchor | relative_url -%}
+{%- elsif entry.page_url contains '://' -%}
+{%- assign event_url = entry.page_url -%}
+{%- else -%}
+{%- assign event_url = entry.page_url | relative_url -%}
+{%- endif -%}
 BEGIN:VEVENT
 UID:osr2026-{% if session %}{{ session.id }}{% else %}{{ entry.id }}{% endif %}@ohbm.github.io
 DTSTAMP:20260323T170000Z
 DTSTART;TZID=Europe/Paris:{% if session %}{{ session.gcal_start }}{% else %}{{ entry.gcal_start }}{% endif %}
 DTEND;TZID=Europe/Paris:{% if session %}{{ session.gcal_end }}{% else %}{{ entry.gcal_end }}{% endif %}
 SUMMARY:{{ summary }}
-DESCRIPTION:OHBM Open Science Room 2026 session. Full schedule: https://ohbm.github.io/osr2026/schedule/
+DESCRIPTION:OHBM Open Science Room 2026 session. Full schedule: {{ schedule_base_url }}{{ schedule_path }}
 LOCATION:OHBM Open Science Room
-URL:{{ schedule_base_url }}{% if session %}{{ session.page_url }}#{{ session.anchor }}{% else %}{{ entry.page_url }}{% endif %}
+URL:{% if event_url contains '://' %}{{ event_url }}{% else %}{{ schedule_base_url }}{{ event_url }}{% endif %}
 END:VEVENT
 {%- endfor -%}
 {%- endfor -%}

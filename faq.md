@@ -27,9 +27,9 @@ The Open Science Room (OSR) is a conference within a conference, at the <a href=
 
 <div id='whopresent'></div><br>
 ### Who will be presenting in the OSR?
-We have selected presentations following an open call for submission and an open review. The [schedule](/schedule/) of talks contains links to the accepted presentations, with links to speaker bios. You can also review [speaker profiles](/speakers/).
+We have selected presentations following an open call for submission and an open review. The [schedule]({{ '/schedule/' | relative_url }}) of talks contains links to the accepted presentations, with links to speaker bios. You can also review [speaker profiles]({{ '/speakers/' | relative_url }}).
 
-We are open to [submissions for emergent sessions](/submit/) throughout the meeting. Emergent organisers will also be listed on the [speakers](/speakers/) page where profiles are provided.
+We are open to [submissions for emergent sessions]({{ '/submit/' | relative_url }}) throughout the meeting. Emergent organisers will also be listed on the [speakers]({{ '/speakers/' | relative_url }}) page where profiles are provided.
 
 <div id='whovisit'></div><br>
 ### Who can participate in the OSR?
@@ -52,7 +52,7 @@ We have attempted to minimise clashes between our own content and that of the ma
 
 <div id='contact'></div><br>
 ### How do I contact the OSR?
-Before and during the meeting you can contact using one of the channels described [here](contact.md).
+Before and during the meeting you can contact using one of the channels described [here]({{ '/contact/' | relative_url }}).
 
 <div id='help'></div><br>
 ### Find help
@@ -74,9 +74,9 @@ We have structured our content to be repeated across two [timezones] over 24 hou
 
 <div id='contributors'></div><br>
 ### Who has contributed to the OSR?
-The OSR has been built by the [OHBM Open Science Special Interest Group (OS-SIG)](https://ossig.netlify.app/), and the generous support of our team of  [volunteers](volunteers.md) who responded to our call for contributors. We are indebted to the them for the time and energy they have brought to this project.
+The OSR has been built by the [OHBM Open Science Special Interest Group (OS-SIG)](https://ossig.netlify.app/), and the generous support of our team of [volunteers]({{ '/volunteers/' | relative_url }}) who responded to our call for contributors. We are indebted to them for the time and energy they have brought to this project.
 
-You can join the team for next year by running for election into the OS-SIG, or staying close to OS-SIG activities and reaching out as we start to build again next year! You can find out more about OS-SIG operations by joining the OSR on [June](/schedule/), where you can ask us anything!
+You can join the team for next year by running for election into the OS-SIG, or staying close to OS-SIG activities and reaching out as we start to build again next year. You can find out more about OS-SIG operations by joining the OSR in [the schedule]({{ '/schedule/' | relative_url }}), where you can ask us anything.
 
 <!-- <div id='sponsors'></div><br>
 ### Who has sponsored the OSR?

@@ -18,7 +18,7 @@ Format: in-person or virtually <br>
     * Prep the materials
     * I'm game for anything
 
-***[Get involved now!](/volunteer/)***
+***[Get involved now!]({{ '/volunteer/' | relative_url }})***
 
 ---
 

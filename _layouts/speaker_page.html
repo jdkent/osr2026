@@ -35,9 +35,16 @@ layout: base
           <tr style="border: none; background: none"><td style="border: none; background: none">
           <h3> Talks </h3>
           {% for talk in talks %}
+            {% assign talk_href = talk.Link %}
+            {% assign talk_external = false %}
+            {% if talk_href contains '://' %}
+              {% assign talk_external = true %}
+            {% else %}
+              {% assign talk_href = talk_href | relative_url %}
+            {% endif %}
             <span>
                 <h4><i> {{ talk.TalkTitle }} </i></h4>
-                <h5><a target="_blank" href="{{talk.Link}}">Talk abstract</a> - {{ talk.Date }} </h5>
+                <h5><a href="{{ talk_href }}"{% if talk_external %} target="_blank" rel="noopener"{% endif %}>Session details</a> - {{ talk.Date }} </h5>
                 <h5>Theme: {{talk.Theme}}</h5>
                 <h5>Format: {{talk.TalkFormat}}</h5>
                 <br>

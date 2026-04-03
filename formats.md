@@ -56,7 +56,7 @@ Questions from the audience are encouraged (via chat feature if virtual) and wil
 <ol>
 {% for session in scheduled_sessions %}
   {% if session.category == "roundtable" or session.category == "panel" %}
-  <li>{% if session.category == "roundtable" %}OSR Round Table{% else %}OSR Panel{% endif %}: {{ session.title }}</li>
+  <li><a href="{{ session.page_url | append: '#' | append: session.anchor | relative_url }}">{% if session.category == "roundtable" %}OSR Round Table{% else %}OSR Panel{% endif %}: {{ session.title }}</a></li>
   {% endif %}
 {% endfor %}
 </ol>
@@ -82,7 +82,7 @@ Questions from the audience are encouraged (via chat feature if virtual) and wil
 <p align="justify"> In the 2026 OSR, the table talks include:</p>
 <ol>
 {% for session in table_talks %}
-  <li>{{ session.title }}</li>
+  <li><a href="{{ session.page_url | append: '#' | append: session.anchor | relative_url }}">{{ session.title }}</a></li>
 {% endfor %}
 </ol>
 <p align="justify"> If you have any question regarding these sessions or would like to be featured, please feel free to contact us at ohbmopenscience@gmail.com.</p>
@@ -97,7 +97,7 @@ Questions from the audience are encouraged (via chat feature if virtual) and wil
 <p align="justify">**What are Emergent Sessions?**</p>
 <p align="justify"> Emergent Sessions are spontaneous and interactive hot topic talks hosted by OSR attendees. Emergent sessions may last from 30 minutes to one hour (ideally 30 minutes planned talk and 30 minutes discussion). The duration will be set by the participant organizer, or it will run for as long as the conversation is flowing. Emergent Sessions can be framed as conversations held in an open format among peers. These sessions may be used to invite contributions to collaborative projects, hold an open forum to discuss a development in existing projects, hold a panel discussion, or basically anything you would like!</p>
 
-<p align="justify">**Emergent Sessions** are [available via application with limited slots](/submit/){:target="_blank"}.</p>
+<p align="justify">**Emergent Sessions** are [available via application with limited slots]({{ '/submit/' | relative_url }}){:target="_blank"}.</p>
 
 <p align="justify">**How do I host an Emergent Session?**</p>
 <p align="justify"> Emergent Sessions are bookable during the meeting for times allocated for Emergent Sessions.
