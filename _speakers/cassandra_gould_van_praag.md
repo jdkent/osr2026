@@ -1,5 +1,5 @@
 ---
-Photo: 
+Photo: /img/speakers/headshot-cass-2025-square.jpg
 Name: Cassandra Gould Van Praag
 Title: Executive Director
 Pronouns: she/her
